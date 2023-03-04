@@ -13,7 +13,7 @@ html, body{
   z-index: 903;
 }
 .back{
-  z-index: 902;
+  z-index: 901;
 }
 .ripp{
   z-index: 900;
@@ -33,6 +33,12 @@ html, body{
 }
 .hsmoke{
   z-index: 905;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  position: absolute;
+  width: 8vw;
+  top: 64vh;
+  left: 68vw;
 }
 .snowman{
   z-index: 905;
@@ -42,6 +48,11 @@ html, body{
 }
 .flameDr{
   z-index: 905;
+  position: absolute;
+  width: 3vw;
+  top: 81vh;
+  left: 64vw;
+  backface-visibility: hidden;
 }
 .sun{
   position: absolute;
@@ -50,13 +61,12 @@ html, body{
   height: 100%;
   object-fit:cover;
   object-position: center;
-  animation: movesun 5s infinite linear;
 }
 .cabin{
   position: absolute;
   z-index: 904;
   width: 1.5%;
-  animation: movecabin 8s infinite linear;
+  /* animation: movecabin 8s infinite linear; */
 }
 .threeHouse{
   z-index: 906;
@@ -102,6 +112,8 @@ html, body{
   top: 65%;
   width: 10vw;
   transition: transform 1s ease-out;
+  backface-visibility: hidden;
+
 }
 .ship{
   position: absolute;
@@ -118,6 +130,8 @@ html, body{
 .cloud{
   position: absolute;
   z-index: 900;
+  backface-visibility: hidden;
+  transform: translateZ(0)
 }
 .cloud.one{
   top: 50%;
@@ -160,12 +174,15 @@ html, body{
 }
 .balloon-atr{
   position: absolute;
-  z-index: 1001;
+  z-index: 901;
+
   width: 7%;
   top: 12%;
   left: 12%;
-  animation: moveballoon 130s infinite linear;
-  transition: left 1s ease-out;
+  /* animation: moveballoon 130s infinite linear; */
+  transition: transform 1s ease-out;
+  backface-visibility: hidden;
+  /* transform: translateZ(0) */
 }
 .balloon-atr img{
   max-width: 100%;
@@ -182,6 +199,7 @@ img.flame{
 }
 .ripp{
   animation: moveripp 6s infinite linear;
+  backface-visibility: hidden;
 }
 @keyframes moveripp {
   0% {
@@ -274,15 +292,3 @@ img.flame{
     transform: translate(500%, 500%);
   }
 }
-/* хотела солнышко поувеличивать, но нужно изображение чисто солнышка, без окружения. Ибо оно улетает в другой мир */
-/* @keyframes movesun {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */

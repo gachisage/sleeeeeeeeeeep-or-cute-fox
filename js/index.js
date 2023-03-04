@@ -3,26 +3,30 @@ document.addEventListener('DOMContentLoaded', loaded)
 function loaded() {
 
   const $ = (selector) => document.querySelector(selector)
+  $('#loader').style.display = 'none'
 
   function layout(count, int, selector, path1, path2){
     let currentImage = 1
     const imageCount = count
     const intervalTime = int
+    const loaderImage = $(selector)
+    let lastTime = 0;
 
-    function switchImage() {
-      const loaderImage = $(selector)
-      currentImage = currentImage === imageCount ? 1 : currentImage + 1
-      loaderImage.src = `${path1}${currentImage}${path2}`
-
+    function switchImage(timestamp) {
+      const deltaTime = timestamp - lastTime;
+      if (deltaTime >= intervalTime) {
+        currentImage = currentImage === imageCount ? 1 : currentImage + 1
+        loaderImage.src = `${path1}${currentImage}${path2}`
+        lastTime = timestamp;
+      }
+      requestAnimationFrame(switchImage)
     }
 
-    setInterval(switchImage, intervalTime)
+    requestAnimationFrame(switchImage)
   }
 
 
   function loading(){
-    $('#loader').style.display = 'none'
-
     layout(13, 60, '.loader-image', 'img/fox/','.1.png')
   }
 
@@ -39,12 +43,17 @@ function loaded() {
   }
 
   function smokeHouse(){
-    layout(6, 100, '.hsmoke', 'img/houseSmoke/','.png')
+    layout(6, 140, '.hsmoke', 'img/houseSmoke/','.png')
   }
 
-  loading()
-  smoke()
-  flameBall()
-  flameDr()
-  smokeHouse()
+  function animate() {
+    requestAnimationFrame(smoke);
+    requestAnimationFrame(smokeHouse);
+    requestAnimationFrame(flameDr);
+    requestAnimationFrame(flameBall);
+    requestAnimationFrame(loading);
+  }
+
+  animate()
+
 }
