@@ -1,0 +1,288 @@
+html, body{
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.sky{
+  z-index: 900;
+}
+.water{
+  z-index: 900;
+}
+.mount{
+  z-index: 903;
+}
+.back{
+  z-index: 902;
+}
+.ripp{
+  z-index: 900;
+}
+.trees{
+  z-index: 904;
+}
+.pier{
+  z-index: 903;
+}
+.boats{
+  z-index: 903;
+  animation: moveboats 15s infinite linear;
+}
+.house{
+  z-index: 905;
+}
+.hsmoke{
+  z-index: 905;
+}
+.snowman{
+  z-index: 905;
+}
+.drova{
+  z-index: 905;
+}
+.flameDr{
+  z-index: 905;
+}
+.sun{
+  position: absolute;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  object-position: center;
+  animation: movesun 5s infinite linear;
+}
+.cabin{
+  position: absolute;
+  z-index: 904;
+  width: 1.5%;
+  animation: movecabin 8s infinite linear;
+}
+.threeHouse{
+  z-index: 906;
+}
+.flameFair{
+  z-index: 905;
+}
+.byiki{
+  z-index: 905;
+}
+.stouns{
+  z-index: 905;
+}
+.bird{
+  z-index: 903;
+}
+.tros{
+  position: absolute;
+  z-index: 904;
+}
+.path{
+  width: 50%;
+}
+
+#loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#loader img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.nature{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#ship{
+  position: absolute;
+  z-index: 903;
+  top: 65%;
+  width: 10vw;
+  transition: transform 1s ease-out;
+}
+.ship{
+  position: absolute;
+  width: 100%;
+}
+.smoke{
+  top: -30px;
+  left: -22px;
+  width: 60%;
+}
+#tros{
+  position: absolute;
+}
+.cloud{
+  position: absolute;
+  z-index: 900;
+}
+.cloud.one{
+  top: 50%;
+  width: 10%;
+  animation: movecloud 20s infinite linear;
+}
+.cloud.tw{
+  top: 22%;
+  width: 30%;
+  animation: movecloud2 15s infinite linear;
+}
+.cloud.th{
+  top: -3%;
+  width: 50%;
+  animation: movecloud 10s infinite linear;
+}
+.cloud.fo{
+  left: 43%;
+  top: 30%;
+  width: 10%;
+  animation: movecloud2 9s infinite linear;
+}
+.cloud.fi{
+  left: 55%;
+  top: 25%;
+  width: 25%;
+  animation: movecloud2 10s infinite linear;
+}
+.cloud.si{
+  right: 0;
+  top: 27%;
+  width: 20%;
+  animation: movecloud 20s infinite linear;
+}
+.cloud.se{
+  right: 0;
+  top: 5%;
+  width: 30%;
+  animation: movecloud 20s infinite linear;
+}
+.balloon-atr{
+  position: absolute;
+  z-index: 1001;
+  width: 7%;
+  top: 12%;
+  left: 12%;
+  animation: moveballoon 130s infinite linear;
+  transition: left 1s ease-out;
+}
+.balloon-atr img{
+  max-width: 100%;
+  max-height: 100%;
+}
+img.flame{
+  position: absolute;
+  top: 66%;
+  left: 44%;
+  width: 8%;
+}
+.balloon-atr.flame{
+  position: absolute;
+}
+.ripp{
+  animation: moveripp 6s infinite linear;
+}
+@keyframes moveripp {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 0
+  }
+  30% {
+    opacity: 100%
+  }
+  60% {
+    transform: translate(0px, 30px);
+    opacity: 20%;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 0;
+  }
+}
+@keyframes movecloud {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 100%;
+  }
+  45% {
+    transform: translate(20px, 10px);
+  }
+  75% {
+    transform: translate(10px, 20px);
+   opacity: 60%;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 100%;
+  }
+}
+@keyframes movecloud2 {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 100%;
+  }
+  45% {
+    transform: translate(-30px, -5px);
+    opacity: 60%;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes moveboats {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-3px, 3px);
+  }
+
+  50% {
+    transform: translate(0px, 0px);
+  }
+  75% {
+    transform: translate(3px, 3px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes movecabin {
+  0% {
+    transform: translate(1200%, 1900%);
+    z-index: 905;
+  }
+  40% {
+    transform: translate(1000%, 300%);
+  }
+  50% {
+    transform: translate(1200%, 340%);
+  }
+  55% {
+  }
+  80%{
+    transform: translate(500%, 500%);
+    z-index: 900;
+  }
+  82%{
+    z-index: 905;
+  }
+  100% {
+    transform: translate(500%, 500%);
+  }
+}
+/* хотела солнышко поувеличивать, но нужно изображение чисто солнышка, без окружения. Ибо оно улетает в другой мир */
+/* @keyframes movesun {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
