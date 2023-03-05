@@ -76,6 +76,7 @@ html, body{
 }
 .byiki{
   z-index: 905;
+    animation: moveby 8s infinite linear;
 }
 .stouns{
   z-index: 905;
@@ -90,7 +91,6 @@ html, body{
 .path{
   width: 50%;
 }
-
 #loader{
   display: flex;
   align-items: center;
@@ -108,12 +108,11 @@ html, body{
 }
 #ship{
   position: absolute;
-  z-index: 903;
+  z-index: 901;
   top: 65%;
   width: 10vw;
   transition: transform 1s ease-out;
   backface-visibility: hidden;
-
 }
 .ship{
   position: absolute;
@@ -255,14 +254,14 @@ img.flame{
     transform: translate(0px, 0px);
   }
   25% {
-    transform: translate(-3px, 3px);
+    transform: translate(-6px, 6px);
   }
 
   50% {
     transform: translate(0px, 0px);
   }
   75% {
-    transform: translate(3px, 3px);
+    transform: translate(6px, 6px);
   }
   100% {
     transform: translate(0px, 0px);
@@ -290,5 +289,23 @@ img.flame{
   }
   100% {
     transform: translate(500%, 500%);
+  }
+}
+@keyframes moveby {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-6px, 6px);
+  }
+
+  50% {
+    transform: translate(0px, 0px);
+  }
+  75% {
+    transform: translate(6px, 6px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 }

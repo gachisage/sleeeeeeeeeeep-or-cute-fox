@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
 
  function moveBalloon(){
   const radX = document.querySelector('body').getBoundingClientRect().width
@@ -28,9 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (t > 2 * Math.PI) {
      t = 0
     }
-
     zin = y < y0 ? element.style.zIndex = 901 : element.style.zIndex = 905
-
    }
    requestAnimationFrame(moveElement)
   }
@@ -70,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//  moveCabin()
- moveShip()
- moveBalloon()
-})
+setTimeout(() => {
+  moveShip()
+  moveBalloon()
+}, 8000)
