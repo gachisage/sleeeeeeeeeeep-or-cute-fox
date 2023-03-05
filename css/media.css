@@ -64,6 +64,9 @@
   .water{
     top:5%;
   }
+  .flameDr{
+    display: none;
+  }
   .hsmoke{
     top: 76vh;
     left: 71vw;
