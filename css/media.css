@@ -7,40 +7,40 @@
   .hsmoke{
     top: 68vh;
   }
-  .smoke{
+  /* .smoke{
     top: -97px;
     left: -60px;
 
-  }
+  } */
 }
 @media (max-width: 1920px) {
-  .smoke{
+  /* .smoke{
     top: -30px;
     left: -22px;
     width: 60%;
-  }
+  } */
 }
 @media (max-width: 1200px) {
-  html, body{
+  /* html, body{
     overflow: hidden;
-  }
-  #ship{
+  } */
+  /* #ship{
     top: 63vh;
-  }
+  } */
 
 }
 @media (max-width: 1000px) {
-  #ship{
+  /* #ship{
     top: 64vh;
-  }
+  } */
 }
 @media (max-width: 820px) {
   html, body{
     overflow: hidden;
   }
-  #ship{
+  /* #ship{
     top: 67%;
-  }
+  } */
   .hsmoke{
     top: 76vh;
   }
