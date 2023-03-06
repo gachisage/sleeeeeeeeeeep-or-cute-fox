@@ -4,7 +4,7 @@ html, body{
   overflow: hidden;
 }
 body{
-  background-color: #dffff4;
+  background-color: rgb(199,232,249)
 }
 .sky{
   z-index: 900;
