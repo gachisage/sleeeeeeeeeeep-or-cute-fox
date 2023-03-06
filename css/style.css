@@ -3,6 +3,9 @@ html, body{
   height: 100%;
   overflow: hidden;
 }
+body{
+  background-color: #dffff4;
+}
 .sky{
   z-index: 900;
 }
@@ -126,8 +129,8 @@ html, body{
 #ship{
   position: absolute;
   z-index: 901;
-  top: 66%;
-  width: 4%;
+  top: 68%;
+  width: 2.5%;
   animation: moveShip 120s infinite linear;
 }
 #ship img{
@@ -266,7 +269,7 @@ img.flame{
 }
 @keyframes moveShip {
   from {
-    left: -5%;
+    left: -2%;
     transform: translate(0) translateY(0)
   }
   to {
