@@ -6,10 +6,11 @@ window.onload = function() {
 
   loading();
   setTimeout(function() {
-
-    $('#loader').style.display = "none";
-    cancelAnimationFrame(loading)
     $('#nature').style.display = 'block'
+    $('#loader').style.display = "none";
+    $('.hsmoke').style.display = "none";
+    cancelAnimationFrame(loading)
+
   }, 6000);
 
   setTimeout(function() {
@@ -36,7 +37,7 @@ function flameDr(){
   layout(4, 150, '.flameDr', 'img/flameFair/','.png')
 }
 function smokeHouse(){
-  layout(6, 140, '.hsmoke', 'img/houseSmoke/','.png')
+  layout(7, 140, '.hsmoke', 'img/houseSmoke/','.png')
 }
 
 function animate() {
