@@ -36,8 +36,12 @@
     top: 15%;
   }
   #ship{
-    top: 74%;
+    top: 73.5%;
   }
+  .smoke{
+    position: absolute;
+    top: -6%;
+   }
   .water{
     top:5%;
   }
@@ -48,7 +52,7 @@
     left: 67vw;
   }
   .compress{
-    top: 51%;
+    top: 56%;
     height: 66.6vw;
     object-fit: cover;
   }
