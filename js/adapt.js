@@ -4,7 +4,7 @@ const height = document.documentElement.clientHeight
 console.log(width/height);
 
 
-  const percent = (1 - (width/height)) * 100;
+  const percent = ((width/height)) * 100;
   smokeh.style.top = `${percent}%`;
   console.log(percent);
 

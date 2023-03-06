@@ -2,13 +2,13 @@
 const $ = (selector) => document.querySelector(selector)
 $('#nature').style.display = 'none'
 
-window.onload = function() {
+// window.onload = function() {
 
   loading();
   setTimeout(function() {
     $('#nature').style.display = 'block'
     $('#loader').style.display = "none";
-    $('.hsmoke').style.display = "none";
+    // $('.hsmoke').style.display = "none";
     cancelAnimationFrame(loading)
 
   }, 6000);
@@ -16,7 +16,7 @@ window.onload = function() {
   setTimeout(function() {
     cancelAnimationFrame(loading)
   }, 10000);
-};
+// };
 
 
 
