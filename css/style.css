@@ -119,7 +119,7 @@ html, body{
   z-index: 901;
   top: 64%;
   width: 8%;
-  animation: moveShip 60s infinite ease-in-out;
+  animation: moveShip 30s infinite linear;
 }
 #ship img{
   max-width: 100%;

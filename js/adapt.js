@@ -2,6 +2,13 @@ const smokeh = document.querySelector('.hsmoke')
 const width = document.documentElement.clientWidth
 const height = document.documentElement.clientHeight
 console.log(width/height);
+
+
+  const percent = (1 - (width/height)) * 100;
+  smokeh.style.top = `${percent}%`;
+  console.log(percent);
+
+
 // if(width/height > 0.5){
 //   smokeh.style.top = '77%'
 // }
@@ -17,5 +24,4 @@ console.log(width/height);
 
 function topSmoke(){
   const ratio = width/height
-
 }

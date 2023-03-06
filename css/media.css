@@ -59,7 +59,7 @@
     width: 13%;
   } */
   #ship{
-    display: none;
+    top: 74%;
   }
   .water{
     top:5%;
