@@ -81,7 +81,7 @@ html, body{
 }
 .byiki{
   z-index: 905;
-    animation: moveby 8s infinite linear;
+  animation: moveby 8s infinite linear;
 }
 .stouns{
   z-index: 905;
@@ -165,7 +165,7 @@ html, body{
   left: 43%;
   top: 30%;
   width: 10%;
-  animation: movecloud 15s infinite linear, opacitycl 8s infinite linear
+  animation: movecloud 10s infinite linear, opacitycl 8s infinite linear
 }
 .cloud.fi{
   left: 55%;
@@ -223,8 +223,6 @@ img.flame{
     opacity: 20%;
   }
 }
-
-,,,
 
 @keyframes movecloud {
   from { transform: rotate(0deg) translateX(10px) rotate(0deg); }
