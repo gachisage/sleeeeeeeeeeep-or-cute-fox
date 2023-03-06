@@ -4,7 +4,7 @@ html, body{
   overflow: hidden;
 }
 body{
-  background-color: rgb(199,232,249)
+
 }
 .sky{
   z-index: 900;
@@ -100,10 +100,19 @@ body{
   width: 50%;
 }
 #loader{
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
+  z-index: 1000;
+  animation: loader 7s linear;
+  background-color: rgb(199,232,249);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+
 }
 #loader img{
   max-width: 100%;
@@ -130,7 +139,7 @@ body{
   position: absolute;
   z-index: 901;
   top: 68%;
-  width: 2.5%;
+  width: 4%;
   animation: moveShip 120s infinite linear;
 }
 #ship img{
@@ -230,7 +239,20 @@ img.flame{
     opacity: 20%;
   }
 }
-
+@keyframes loader {
+  0% {
+    opacity: 100%
+  }
+  70%{
+    opacity: 100%
+  }
+  95%{
+    opacity: 0%
+  }
+  100%{
+    opacity: 0%
+  }
+}
 @keyframes movecloud {
   from { transform: rotate(0deg) translateX(10px) rotate(0deg); }
   to   { transform: rotate(360deg) translateX(10px) rotate(-360deg); }

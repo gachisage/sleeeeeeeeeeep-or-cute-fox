@@ -1,7 +1,5 @@
 @media (max-width: 600px){
-  #loader{
-    margin: 0 10%;
-  }
+
 }
 @media (max-width: 4000px) {
 }
@@ -40,7 +38,7 @@
   }
   .smoke{
     position: absolute;
-    top: 25%;
+    top: -7%;
    }
   .water{
     top:5%;

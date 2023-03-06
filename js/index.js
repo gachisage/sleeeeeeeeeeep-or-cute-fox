@@ -1,28 +1,25 @@
 
 const $ = (selector) => document.querySelector(selector)
-$('#nature').style.display = 'none'
+// $('#nature').style.display = 'none'
 
 // window.onload = function() {
 
   loading();
-  setTimeout(function() {
-    $('#nature').style.display = 'block'
-    $('#loader').style.display = "none";
-    // $('.hsmoke').style.display = "none";
-    cancelAnimationFrame(loading)
 
-  }, 6000);
-
-  setTimeout(function() {
-    cancelAnimationFrame(loading)
-  }, 10000);
 // };
+setTimeout(function() {
 
+  $('body').removeChild($('#loader'))
+}, 7000);
+
+setTimeout(function() {
+  cancelAnimationFrame(loading)
+}, 10000);
 
 
 setTimeout(function() {
   animate()
-}, 8000);
+}, 6000);
 
 function loading(){
   layout(13, 60, '.loader-image', 'img/fox/','.1.png')
@@ -36,13 +33,13 @@ function smoke(){
 function flameDr(){
   layout(4, 150, '.flameDr', 'img/flameFair/','.png')
 }
-function smokeHouse(){
-  layout(7, 140, '.hsmoke', 'img/houseSmoke/','.png')
-}
+// function smokeHouse(){
+//   layout(7, 140, '.hsmoke', 'img/houseSmoke/','.png')
+// }
 
 function animate() {
   smoke();
-  smokeHouse();
+  // smokeHouse();
   flameDr();
   flameBall();
 }
