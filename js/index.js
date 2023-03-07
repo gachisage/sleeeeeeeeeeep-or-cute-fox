@@ -10,7 +10,7 @@ const $ = (selector) => document.querySelector(selector)
 setTimeout(function() {
 
   $('body').removeChild($('#loader'))
-}, 7000);
+}, 10000);
 
 setTimeout(function() {
   cancelAnimationFrame(loading)
@@ -36,12 +36,16 @@ function flameDr(){
 // function smokeHouse(){
 //   layout(7, 140, '.hsmoke', 'img/houseSmoke/','.png')
 // }
+function movefox(){
+  layout(5, 100, '.fox', 'img/fox/foxSmall/','.1.png')
+}
 
 function animate() {
   smoke();
   // smokeHouse();
   flameDr();
   flameBall();
+  movefox()
 }
 
 function layout(count, int, selector, path1, path2){

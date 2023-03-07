@@ -3,9 +3,6 @@ html, body{
   height: 100%;
   overflow: hidden;
 }
-body{
-
-}
 .sky{
   z-index: 900;
 }
@@ -21,10 +18,7 @@ body{
 .ripp{
   z-index: 900;
 }
-/* .compress{
-  max-width: 100%;
-  max-height: 100%;
-} */
+
 .trees{
   z-index: 904;
 }
@@ -32,9 +26,8 @@ body{
   z-index: 903;
 }
 .boats{
-  /* top: -20px; */
   z-index: 903;
-  animation: moveboats 15s linear infinite;
+  animation: moveboats 30s linear infinite;
 }
 .house{
   z-index: 905;
@@ -84,7 +77,7 @@ body{
 }
 .byiki{
   z-index: 905;
-  animation: moveby 8s infinite linear;
+  animation: moveby 16s infinite linear;
 }
 .stouns{
   z-index: 905;
@@ -107,12 +100,11 @@ body{
   height: 100%;
   width: 100%;
   z-index: 1000;
-  animation: loader 7s linear;
+  animation: loader 7s linear 1 forwards;
   background-color: rgb(199,232,249);
   overflow: hidden;
   top: 0;
   left: 0;
-
 }
 #loader img{
   max-width: 100%;
@@ -132,8 +124,14 @@ body{
   height: 100%;
 }
 .fox{
-  position: absolute;
   z-index: 905;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  left: 49.5vw;
+  height: 100%;
 }
 #ship{
   position: absolute;
@@ -207,7 +205,7 @@ body{
   width: 7%;
   top: 12%;
   left: 12%;
-  animation: moveBall 180s infinite linear;
+  animation: moveBall 220s infinite linear;
 }
 .balloon-atr img{
   max-width: 100%;
@@ -247,7 +245,7 @@ img.flame{
     opacity: 100%
   }
   95%{
-    opacity: 0%
+    opacity: 2%
   }
   100%{
     opacity: 0%
@@ -299,14 +297,11 @@ img.flame{
     transform: translateX(-100%) translateY(0)
   }
 }
-
-
 @keyframes moveBall {
   0%, 100%{
     top: 50%;
-    left: 110%;
+    left: 107%;
     transform: translateX(100%) scale(1);
-
     z-index: 901;
   }
   1%{
